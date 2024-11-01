@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy kanban</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <!-- Les trois cases -->
+
+  <body>
+    <h1>My to do liste</h1>
+    <hr />
+    <section id="cartes">
+      <div class="cases">
+        <!-- Case 1 -->
+        <div class="To-do">
+          <div class="blue">
+            <h2>To do</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9.963 8.261c-.566-.585-.536-1.503.047-2.07l5.948-5.768c.291-.281.664-.423 1.035-.423.376 0 .75.146 1.035.44l-8.065 7.821zm-9.778 14.696c-.123.118-.185.277-.185.436 0 .333.271.607.607.607.152 0 .305-.057.423-.171l.999-.972-.845-.872-.999.972zm8.44-11.234l-3.419 3.314c-1.837 1.781-2.774 3.507-3.64 5.916l1.509 1.559c2.434-.79 4.187-1.673 6.024-3.455l3.418-3.315-3.892-4.019zm9.97-10.212l-8.806 8.54 4.436 4.579 8.806-8.538c.645-.626.969-1.458.969-2.291 0-2.784-3.373-4.261-5.405-2.29z"
+              />
+            </svg>
+          </div>
+          <div class="tasks1">
+            <div class="exemple1">
+              <div>
+                <h4>revize HTML</h4>
+                <p>03/11/2024</p>
+                <p>to-do</p>
+                <p>revize HTML</p>
+              </div>
+              <div class="icons">
+                <button type="button" class="delete">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="Doing">
+          <div>
+            <h2>Doing</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9.963 8.261c-.566-.585-.536-1.503.047-2.07l5.948-5.768c.291-.281.664-.423 1.035-.423.376 0 .75.146 1.035.44l-8.065 7.821zm-9.778 14.696c-.123.118-.185.277-.185.436 0 .333.271.607.607.607.152 0 .305-.057.423-.171l.999-.972-.845-.872-.999.972zm8.44-11.234l-3.419 3.314c-1.837 1.781-2.774 3.507-3.64 5.916l1.509 1.559c2.434-.79 4.187-1.673 6.024-3.455l3.418-3.315-3.892-4.019zm9.97-10.212l-8.806 8.54 4.436 4.579 8.806-8.538c.645-.626.969-1.458.969-2.291 0-2.784-3.373-4.261-5.405-2.29z"
+              />
+            </svg>
+          </div>
+          <div class="tasks2"></div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="Done">
+          <div>
+            <h2>Done</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9.963 8.261c-.566-.585-.536-1.503.047-2.07l5.948-5.768c.291-.281.664-.423 1.035-.423.376 0 .75.146 1.035.44l-8.065 7.821zm-9.778 14.696c-.123.118-.185.277-.185.436 0 .333.271.607.607.607.152 0 .305-.057.423-.171l.999-.972-.845-.872-.999.972zm8.44-11.234l-3.419 3.314c-1.837 1.781-2.774 3.507-3.64 5.916l1.509 1.559c2.434-.79 4.187-1.673 6.024-3.455l3.418-3.315-3.892-4.019zm9.97-10.212l-8.806 8.54 4.436 4.579 8.806-8.538c.645-.626.969-1.458.969-2.291 0-2.784-3.373-4.261-5.405-2.29z"
+              />
+            </svg>
+          </div>
+          <div class="tasks3"></div>
+        </div>
+      </div>
+      <hr />
+      <!-- le boutton  -->
+      <div style="display: flex; justify-content: end">
+        <button class="button-creat">Create</button>
+      </div>
+    </section>
+
+    <!-- formulaire -->
+    <section>
+      <form>
+        <div class="formulaire">
+          <h1>Add a task</h1>
+          <label for="Task-name">Name of the task:</label>
+          <input
+            type="text"
+            id="Task-name"
+            placeholder="Enter the name of your task..."
+          />
+
+          <label for="Duration-Task">Duration of the task:</label>
+          <input
+            type="date"
+            id="Duration-Task"
+            placeholder="Enter the duration of the task..."
+          />
+
+          <label for="priority">Priority of the task:</label>
+          <select name="selection" id="priority">
+            <option value="to-do">to do</option>
+            <option value="doing">doing</option>
+            <option value="done">done</option>
+          </select>
+          <label for="Description-task">Description of the task :</label>
+          <textarea
+            name="Description"
+            id="Descroption-task"
+            rows="5"
+            cols="30"
+            placeholder="Enter your descripton..."
+          ></textarea>
+
+          <div style="display: flex; justify-content: end; gap: 15px">
+            <button type="button" class="button-Save">Save</button>
+            <button type="button" class="button-cancel">cancel</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
