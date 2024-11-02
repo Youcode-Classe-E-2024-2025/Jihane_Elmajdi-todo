@@ -70,3 +70,4 @@ function deleteTask(element, event) {
     element.remove();
   }
 }
+// finalisations
