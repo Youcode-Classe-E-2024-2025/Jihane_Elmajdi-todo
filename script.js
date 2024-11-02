@@ -1,3 +1,5 @@
+// const { log } = require("console");
+
 const createBtn = document.querySelector(".button-creat");
 const form = document.querySelector("form");
 const cases = document.getElementById("cartes");
@@ -32,7 +34,7 @@ function getFormData() {
   const doingColumn = document.querySelector(".tasks2");
   const doneColumn = document.querySelector(".tasks3");
 
-  const task = `<div class="tasks1">
+  const task = `<div class="task" onclick="deleteTask(this,event)" >
           <div class="exemple1">
             <div>
               <h4>${taskNameValue}</h4>
@@ -42,7 +44,7 @@ function getFormData() {
             </div>
             <div class="icons">
               <button type="button" class="delete">
-                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-trash delete-icon"></i>
               </button>
             </div>
           </div>`;
@@ -59,3 +61,11 @@ function getFormData() {
   }
 }
 // le boutton de supression//
+function deleteTask(element, event) {
+  console.log(event.target);
+  console.log(event.target.classList);
+  console.log(event.target.classList.contains("delete-icon"));
+  if (event.target.classList.contains("delete-icon")) {
+    element.remove();
+  }
+}

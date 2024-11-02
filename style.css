@@ -192,7 +192,7 @@ form {
   font-size: 11px;
   background-color: rgb(245, 185, 101);
   border-radius: 15px;
-  border: 2.4px solid rgb(6, 6, 6);
+  border: 2px solid rgb(6, 6, 6);
   margin: 10px;
   display: flex;
   justify-content: space-between;
@@ -282,3 +282,4 @@ footer {
 .footer a:hover {
   text-decoration: none;
 }
+/*  */
