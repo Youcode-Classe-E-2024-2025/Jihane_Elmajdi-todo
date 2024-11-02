@@ -3,7 +3,6 @@ const form = document.querySelector("form");
 const cases = document.getElementById("cartes");
 const cancelBtn = document.querySelector(".button-cancel");
 const saveBtn = document.querySelector(".button-Save");
-// const deleteBtn = document.querySelector(".delete");
 
 createBtn.addEventListener("click", function () {
   form.style.display = "block";
@@ -20,12 +19,6 @@ saveBtn.addEventListener("click", function () {
   cases.classList.remove("filtre");
   getFormData();
 });
-
-// deleteBtn.addEventListener("click", function () {
-//   form.style.display = "none";
-//   cases.classList.remove("filtre");
-//   getFormData();
-// });
 
 function getFormData() {
   const taskNameValue = document.querySelector("#Task-name").value;
@@ -65,4 +58,3 @@ function getFormData() {
     doneColumn.insertAdjacentHTML("beforeend", task);
   }
 }
-// getFormData();
