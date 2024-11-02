@@ -169,15 +169,6 @@ form {
   filter: blur(10px);
 }
 
-@keyframes animateform {
-  from {
-    left: -100%;
-  }
-
-  to {
-    left: 10px;
-  }
-}
 .button-cancel {
   background-color: rgb(250, 134, 208);
   width: 100px;
@@ -247,4 +238,47 @@ p {
 
 form {
   animation: bounceIn 1s ease-in-out forwards;
+}
+/* footer */
+footer {
+  background: #282c34;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 8px;
+  border: 3px solid white;
+}
+
+.footer h2 {
+  font-family: "Rubik Wet Paint";
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.footer p {
+  margin: 10px;
+}
+
+.social-links {
+  margin: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: #61dafb;
+  font-size: 24px;
+}
+
+.social-links a:hover {
+  cursor: pointer;
+  color: #ffcc00;
+}
+
+.footer a {
+  color: #61dafb;
+}
+
+.footer a:hover {
+  text-decoration: none;
 }
