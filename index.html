@@ -20,20 +20,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="output .css" />
+    <link rel="stylesheet" href="output.css" />
   </head>
 
   <!-- Les trois cases -->
 
-  <body>
-    <h1>My to do liste</h1>
+  <body class="bg-[#f29bab] m-12;">
+    <h1
+      class="flex justify-center text-[3.13rem] leading-none text-3xl mb-3.5 mt-3.5"
+    >
+      My to do liste
+    </h1>
     <hr />
     <section id="cartes">
-      <div class="cases">
+      <div class="cases flex gap-[0.94rem] items-center flex-wrap">
         <!-- Case 1 -->
-        <div class="To-do">
-          <div class="blue">
-            <h2>To do</h2>
+        <div class="To-do flex flex-col">
+          <div
+            class="blue bg-blue-400 flex items-center justify-center gap-[0.94rem] rounded-2xl"
+          >
+            <h2 class="flex justify-center">To do</h2>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -45,7 +51,7 @@
               />
             </svg>
           </div>
-          <div class="tasks1">
+          <div class="tasks1 min-h-[14.38rem] bg-blue-400 mt-2 rounded-2xl">
             <div class="exemple1">
               <div>
                 <h4>revize HTML</h4>
@@ -54,7 +60,7 @@
                 <p>revize HTML</p>
               </div>
               <div class="icons">
-                <button type="button" class="delete">
+                <button type="button" class="delete h-6 rounded-lg">
                   <i class="fa-solid fa-trash"></i>
                 </button>
               </div>
@@ -63,9 +69,11 @@
         </div>
 
         <!-- Case 2 -->
-        <div class="Doing">
-          <div>
-            <h2>Doing</h2>
+        <div class="Doing flex flex-col">
+          <div
+            class="first-doing flex items-center justify-center gap-[0.94rem] bg-[#f2e088] rounded-2xl"
+          >
+            <h2 class="flex justify-center">Doing</h2>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -77,13 +85,17 @@
               />
             </svg>
           </div>
-          <div class="tasks2"></div>
+          <div
+            class="tasks2 min-h-[14.38rem] bg-yellow-100 mt-2 rounded-2xl"
+          ></div>
         </div>
 
         <!-- Case 3 -->
-        <div class="Done">
-          <div>
-            <h2>Done</h2>
+        <div class="Done flex flex-col">
+          <div
+            class="first-done bg-purple-600 flex items-center justify-center gap-[0.94rem] rounded-2xl"
+          >
+            <h2 class="flex justify-center">Done</h2>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -95,23 +107,36 @@
               />
             </svg>
           </div>
-          <div class="tasks3"></div>
+          <div
+            class="tasks3 min-h-[14.38rem] bg-purple-600 mt-2 rounded-2xl"
+          ></div>
         </div>
       </div>
       <hr />
       <!-- le boutton  -->
       <div style="display: flex; justify-content: end">
-        <button class="button-creat">Create</button>
+        <button
+          class="button-creat w-24 h-12 rounded-xl text-[0.94rem] leading-5 :hover:cursor-pointer bg-[#f81cc5] text-white"
+        >
+          Create
+        </button>
       </div>
     </section>
 
     <!-- formulaire -->
-    <section>
-      <form>
-        <div class="formulaire">
-          <h1>Add a task</h1>
+    <section class="form-section z-[1]">
+      <form class="hidden absolute top-[0.19rem]">
+        <div
+          class="formulaire flex flex-col ml-44 gap-[0.63rem] w-3/5 p-10 pt-0 rounded-2xl bg-[#f285b8] text-white mr-48 pb-4"
+        >
+          <h1
+            class="flex justify-center text-[3.13rem] leading-none text-3xl mb-3.5 mt-3.5"
+          >
+            Add a task
+          </h1>
           <label for="Task-name">Name of the task:</label>
           <input
+            class="p-1 rounded bg-[#fadee4]"
             type="text"
             id="Task-name"
             placeholder="Enter the name of your task..."
@@ -119,19 +144,21 @@
 
           <label for="Duration-Task">Duration of the task:</label>
           <input
+            class="p-1 rounded bg-[#fadee4]"
             type="date"
             id="Duration-Task"
             placeholder="Enter the duration of the task..."
           />
 
           <label for="status">Stutus of the task:</label>
-          <select name="selection" id="status">
+          <select name="selection" id="status" class="rounded bg-[#fadee4] p-1">
             <option value="to-do">to do</option>
             <option value="doing">doing</option>
             <option value="done">done</option>
           </select>
           <label for="Description-task">Description of the task :</label>
           <textarea
+            class="p-1 rounded bg-[#fadee4]"
             name="Description"
             id="Descroption-task"
             rows="5"
@@ -140,8 +167,18 @@
           ></textarea>
 
           <div style="display: flex; justify-content: end; gap: 15px">
-            <button type="button" class="button-Save">Save</button>
-            <button type="button" class="button-cancel">cancel</button>
+            <button
+              type="button"
+              class="button-Save bg-pink-400 w-24 h-12 rounded-xl text-[0.94rem] leading-5 text-white :hover:cursor-pointer :hover:bg-[#f81cc5] :hover:text-stone-950"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              class="button-cancel bg-pink-400 w-24 h-12 rounded-xl text-[0.94rem] leading-5 gap-[0.94rem] text-white"
+            >
+              cancel
+            </button>
           </div>
         </div>
       </form>
@@ -149,27 +186,30 @@
     <script src="script.js"></script>
   </body>
   <!-- Footer -->
-  <footer>
+  <footer class="text-[#fff] p-3 text-center mt-16 rounded-lg">
     <div class="footer">
-      <h2>Restez en contact avec nous!</h2>
+      <h2 class="text-[1.63rem] leading-8">Restez en contact avec nous!</h2>
       <p>&copy; 2024 Votre Nom. Tous droits réservés.</p>
-      <div class="social-links">
+      <div class="social-links m-5">
         <a
           href="https://twitter.com/yourprofile"
           target="_blank"
           aria-label="Twitter"
+          class="my-0 mx-3.5 text-[#61dafb] text-2xl"
           ><i class="fab fa-twitter"></i
         ></a>
         <a
           href="https://github.com/yourprofile"
           target="_blank"
           aria-label="GitHub"
+          class="my-0 mx-3.5 text-[#61dafb] text-2xl"
           ><i class="fab fa-github"></i
         ></a>
         <a
           href="https://linkedin.com/in/yourprofile"
           target="_blank"
           aria-label="LinkedIn"
+          class="my-0 mx-3.5 text-[#61dafb] text-2xl"
           ><i class="fab fa-linkedin"></i
         ></a>
       </div>

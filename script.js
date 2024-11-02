@@ -1,5 +1,3 @@
-// const { log } = require("console");
-
 const createBtn = document.querySelector(".button-creat");
 const form = document.querySelector("form");
 const cases = document.getElementById("cartes");
@@ -9,16 +7,19 @@ const saveBtn = document.querySelector(".button-Save");
 createBtn.addEventListener("click", function () {
   form.style.display = "block";
   cases.classList.add("filtre");
+  document.querySelector("footer").classList.add("filtre");
 });
 
 cancelBtn.addEventListener("click", function () {
   form.style.display = "none";
   cases.classList.remove("filtre");
+  document.querySelector("footer").classList.remove("filtre");
 });
 
 saveBtn.addEventListener("click", function () {
   form.style.display = "none";
   cases.classList.remove("filtre");
+  document.querySelector("footer").classList.remove("filtre");
   getFormData();
 });
 
